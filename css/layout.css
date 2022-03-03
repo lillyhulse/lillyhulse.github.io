@@ -1,0 +1,390 @@
+/* TEMPLATE STYLESHEET */
+
+
+/* These are some suggested groupings for your stylesheet... */
+
+/* Default styling styling for the body.*/
+
+
+body {
+    font-family: 'Crimson Text', Georgia, serif;  /* update with Google font, web safe font and generic fallback */
+    font-size: 100%; /* the default browser font size is 16px */
+    line-height: 1 ; /* update to suit your type choices */
+    color: #000;  /* base text colour - update to suit your design */
+    
+}
+
+/* Default fonts */
+
+input,
+textarea {
+    font-family: sans-serif; /* update with Google font, web safe font and generic fallback */
+}
+
+/* box sizing */
+html {
+    box-sizing: border-box;
+  }
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+  }
+
+/* flexible content images code */
+/* max-width:100% means that the image will be no wider than the containing element (in this case, <div class="test">) */
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+/* element styling (e.g. standard p, h1, h2, a, etc) */
+h1, h2, h3 {
+    font-family:'Julius Sans One', helvetica, sans-serif;
+    line-height: 1;
+    }
+
+h1 {
+    font-size: 3rem;
+    color: #F2EED8;
+    font-weight: 700;
+}  
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: darkslategrey;
+} 
+h3 {
+    font-size: 1.25rem;
+    color: #F2EED8;
+    font-weight: 400;
+}
+p {
+    font-size: 1.25rem;
+    color: black;
+    line-height: 1.5;
+}
+
+dt{
+  font-size: 1.25rem;
+    color: black;
+    padding-bottom: 5px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+dd{
+  font-size: 1.2rem;
+    color: black;
+    padding-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* navigation (using flexbox) */
+/* small screen code */
+.page-nav ul {
+  display: flex;
+  background-color: #F2E7DD ;
+  flex-wrap: wrap;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+@supports (position: sticky) {
+  .is-sticky {
+    position: sticky;
+    top: 0; /*Threshold is required*/
+  }
+}
+
+.page-nav li {
+  flex: 1 1 50%;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  
+}
+
+.page-nav a {
+  padding: 15px 10px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  transition: all 0.2s ease;
+  border: #ddd;
+}
+
+/*Navigation links styling*/
+.page-nav a:link {
+  color: #606070;
+}
+
+.page-nav a:visited {
+  color: #606070;
+
+}
+
+.page-nav a:focus {
+  border-bottom:  1px solid ;
+  border-bottom-color: darkslategray ;
+  background-color: whitesmoke;
+
+}
+
+.page-nav a:hover {
+  border-bottom: 1px solid;     
+  border-bottom-color: darkslategray ;
+  background: rgb(199, 190, 187);
+}
+
+.page-nav a:active {
+  background: #606070;
+  color: #F2E7DD;
+}
+/*larger screen code* with media query*/
+
+@media screen and (min-width: 760px) {
+  .page-nav ul {
+    flex-wrap: nowrap;
+  }
+  .page-nav li {
+    flex: 1 1 25%;
+  }
+}
+
+
+/* page header */
+.page-header {
+
+    background-image: url(../images/my-hero.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode:multiply;
+    background-size: cover;
+    background-color: #606070;
+    background-position:center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.header-content {
+    max-width: 700px;
+    min-height: 40vh;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+}
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    text-shadow: 4px 4px 0 rgb(39, 39, 39); 
+    
+}
+
+
+/* main layout */
+div {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1050px;
+  }
+  
+
+
+/* styling for the section content */
+.container{
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+
+
+}
+
+/* background colours for sections */
+.about-digitalisation {
+    background-color: #F2E7DD;
+
+}
+
+.apprentices {
+    background-color: #F2EED8;
+
+
+}
+
+
+  .image-gallery {
+    background-color: #F2E7DD;
+
+  }
+
+
+  /* controlling an image gallery with CSS */
+
+.image-gallery .container-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  
+
+
+}
+.image-gallery .an-image {
+
+  padding: 10px;
+  background: white;
+  margin: 10px 1%;
+  border-right:  0.5px solid grey;
+  box-shadow: 2px 0px lightgray;
+  border-bottom:2px solid grey;
+  box-shadow: 2px 0px lightgray;
+}
+.image-gallery h2 {
+  text-align: center;
+}
+.gallery-text{
+  font-size: 1.0em;
+  line-height: 1.5;
+}
+
+.image-gallery figure { margin:0; padding: 0.5rem;}
+
+/* image gallery media queries and size overrides */ 
+
+@media screen and (min-width: 900px) {
+  .image-gallery .image-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .image-gallery .an-image {
+    flex: 1 1 30.33%;
+   
+
+  }
+  .image-gallery .image-caption {
+    text-align: center;
+  }
+
+  .image-gallery .an-image+.an-image {
+  margin-left: 20px;
+  }
+}
+
+/* form styling */
+.contact-us {
+    background-color: #F2EED8;
+    ;
+}
+
+form label {
+  display: block;
+  /* instead of inline */
+  padding-bottom: 0.2em;
+  padding-top: 0.5em;
+}
+
+
+form input,
+form textarea {
+  padding: 0.3em 0.4em;
+  font-size: 1.0em;
+  font-family: 'Crimson Text', Georgia, serif; 
+    
+  /* lighter grey, less visually heavy */
+  border: 1px solid #bbb; 
+  border-radius: 0.3em;
+  /* make sure our fields aren't too wide or not wide enough */
+  min-width: 90%;
+  max-width: 90%;
+}
+
+form input[type="submit"] {
+  /* https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors */
+  /* if you used display:block; this would go right across the page - if you use inline-block the button will only be as wide as the text and the padding */
+min-width:0;
+  /* turn off a minimum width for the button and let the browser work it out */
+  background-color: rgb(199, 190, 187);
+  border: 0;
+  border-radius: 0.2em;
+  padding: 13px 30px;
+  margin-top: 10px;
+  /* top and bottom, left and right */
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.2s ease;
+  /* less jarring transition from initial colour to hover colour */
+}
+
+form input[type="submit"]:hover {
+  background-color: rgb(219, 215, 213);
+  /* you don't have to change the colour too much for hover states - just make it a little bit lighter or darker */
+}
+
+
+.js-message {
+  font-size: 1.25rem;
+    color: black;
+    padding-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* footer */
+.page-footer {
+    background:  whitesmoke;
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+   
+  }
+  /*footer links*/
+  a {
+    outline: none;
+    text-decoration: none;
+    padding:  2px 2px;
+    display: inline-block;
+
+
+  }
+  
+  
+  a:link {
+    color: #606070;
+  }
+  
+  a:visited {
+    color: #606070;
+
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background-color: #F2E7DD;
+
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;     
+    background: #F2E7DD;
+  }
+  
+  a:active {
+    background: #606070;
+    color: #F2E7DD;
+  }
+  a[href*="http"] {
+    background-size: 16px 16px;
+    padding-right: 19px;
+  }
